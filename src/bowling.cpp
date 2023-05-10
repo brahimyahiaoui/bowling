@@ -1,3 +1,14 @@
+/**
+ * \file bowling.cpp
+ * \brief Bowling Score Calculation.
+ * \author Brahim Yahiaoui
+ * \version 1.0
+ * \date 12 december 2021
+ *
+ * Declaration of elements to calculate score of a bowler.
+ *
+ */
+
 #include "bowling.h"
 #include "iostream"
 
@@ -167,6 +178,10 @@ CBowler::~CBowler()
 #endif // _DEBUG
 }
 
+/**
+* Calculate last score
+* \return score
+*/
 unsigned int CBowler::CalculateLastScore()
 {
     unsigned int score = 0;
@@ -187,7 +202,7 @@ void CBowler::ComputeLastLaunch(unsigned int prmNumberOfPinsDown)
     }
     else
     {
-        // Here results ar built
+        // Here results are built
         if (prmNumberOfPinsDown <= (unsigned int)EEvent::numberOfPins)
         {
             // We set previous only if we need it to compute a roll after a strike or a spare 
